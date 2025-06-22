@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Sliding</title>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 30px;
+            background-color: white;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            background-color: #45a8f9;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .btn {
+            padding: 12px 20px;
+            font-size: 16px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+        }
+
+        .start {
+            background-color: #2196F3;
+        }
+
+        .stop {
+            background-color: #f44336;
+        }
+
+        #flip {
+            background-color: #555;
+            color: white;
+            padding: 15px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        #panel {
+            display: none;
+            background-color: #555;
+            color: white;
+            padding: 30px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+     <h2>The jQuery stop() method is used to stop animations or effects before it is finished.</h2>
+
+    <button class="btn start" id="start">Start sliding</button>
+    <button class="btn stop" id="stop">Stop sliding</button>
+
+    <div id="flip">Click to slide down/up the panel</div>
+    <div id="panel">
+        <p><strong>Because time is valuable</strong>, we deliver quick and easy learning.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, veniam.</p>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#flip").click(function () {
+                $("#panel").slideToggle(3000); // Slow slide
+            });
+
+            $("#start").click(function () {
+                $("#panel").stop().slideDown(3000); // Start sliding down
+            });
+
+            $("#stop").click(function () {
+                $("#panel").stop(); // Stop any animation
+            });
+        });
+    </script>
+</body>
+</html>
