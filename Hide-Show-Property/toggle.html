@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>jQuery Toggle Example</title>
+  <script src="../jquery-3.7.1.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #e0c3fc, #8ec5fc); /* beautiful gradient */
+      color: #1a1a1a;
+      padding: 40px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #4a148c;
+      font-size: 28px;
+      margin-bottom: 25px;
+      text-shadow: 1px 1px 2px #fff;
+    }
+
+    p {
+      background-color: #ffe0b2;
+      color: #4e342e;
+      padding: 25px;
+      margin: 30px auto;
+      border: 2px solid #ffcc80;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      max-width: 800px;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    button {
+      background-color: #ff5722;
+      color: #ffffff;
+      border: none;
+      padding: 12px 30px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #e64a19;
+      transform: scale(1.05);
+    }
+  </style>
+
+  <script>
+    $(document).ready(function () {
+      $("button").click(function () {
+        $("p").toggle(700); // Toggle with animation
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <h1>This is Hide & Show (Toggle) Event:</h1>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea eum expedita corporis
+    perferendis nam deserunt praesentium tempore rem, unde non labore repudiandae illo
+    sed, maiores amet accusamus molestiae velit quidem fuga. Modi similique dignissimos
+    fugiat quaerat magni ratione consequuntur suscipit possimus! Libero odit odio, dolore
+    quis deleniti debitis mollitia adipisci!
+  </p>
+  <button>Click for Hide and Show</button>
+</body>
+
+</html>
