@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Owl Carousel Slider</title>
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="owl.carousel.min.css" />
+    <link rel="stylesheet" href="owl.theme.default.min.css" />
+
+    <!-- Custom Styles -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background-color: #2f4f4f;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+            background-color: #444;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .owl-carousel {
+            margin-top: 20px;
+        }
+
+        .owl-carousel .item {
+            padding: 10px;
+        }
+
+        .item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .item img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Owl Carousel navigation buttons */
+        .owl-nav button {
+            background-color: white !important;
+            color: #333 !important;
+            border-radius: 50% !important;
+            width: 40px;
+            height: 40px;
+            font-size: 20px !important;
+            margin: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+
+        .owl-nav button:hover {
+            background-color: #ccc !important;
+        }
+
+        /* Dots customization */
+        .owl-dots .owl-dot span {
+            width: 12px;
+            height: 12px;
+            background: #ccc;
+            display: block;
+            border-radius: 50%;
+            margin: 5px;
+        }
+
+        .owl-dots .owl-dot.active span {
+            background: #ff5252;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Example of Image Slider</h1>
+
+    <div class="owl-carousel owl-theme">
+        <div class="item"><img src="assects/perspiciatis-unde.jpg" alt="perspiciatis-unde" /></div>
+        <div class="item"><img src="assects/rem-aperiam.jpg" alt="rem-aperiam" /></div>
+        <div class="item"><img src="assects/accusantium-dolore.jpg" alt="accusantium-dolore" /></div>
+        <div class="item"><img src="assects/omnis-iste.jpg" alt="omnis-iste" /></div>
+        <div class="item"><img src="assects/adipisci-velit.jpg" alt="adipisci-velit" /></div>
+        <div class="item"><img src="assects/numquam-eius.jpg" alt="numquam-eius" /></div>
+        <div class="item"><img src="assects/modi-tempora.jpg" alt="modi-tempora" /></div>
+        <div class="item"><img src="assects/dolore-magnam.jpg" alt="dolore-magnam" /></div>
+    </div>
+
+    <!-- jQuery & Owl Carousel JS -->
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="owl.carousel.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: true,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 2000,
+                responsive: {
+                    0: {
+                        items: 1,
+                    },
+                    600: {
+                        items: 3,
+                    },
+                    1000: {
+                        items: 5,
+                    },
+                },
+            });
+        });
+    </script>
+</body>
+
+</html>
