@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Toggle Demo</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .password-container {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        .password-container i {
+            position: absolute;
+            top: 50%;
+            right: 12px;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #999;
+        }
+
+        .instructions {
+            font-size: 14px;
+            color: #666;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .status {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Password Demo</h2>
+
+        <div class="password-container">
+            <input type="password" id="passwordField" placeholder="Enter password">
+            <i id="showPassword" class="fas fa-eye"></i>
+        </div>
+
+        <div class="instructions">
+            Press and hold the eye icon to reveal the password
+        </div>
+
+        <div class="status" id="eventStatus">
+            Event status will appear here
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#showPassword").on("mousedown", function () {
+                $("#passwordField").attr("type", "text");
+                $(this).removeClass("fa-eye").addClass("fa-eye-slash");
+                $("#eventStatus").text("mousedown event fired: Password visible");
+                $("#eventStatus").css("background-color", "#e6ffed");
+            });
+
+            $("#showPassword").on("mouseup", function () {
+                $("#passwordField").attr("type", "password");
+                $(this).removeClass("fa-eye-slash").addClass("fa-eye");
+                $("#eventStatus").text("mouseup event fired: Password hidden");
+                $("#eventStatus").css("background-color", "#f0f0f0");
+            });
+
+            // This prevents issues if the cursor moves away while holding the button
+            $("#showPassword").on("mouseleave", function () {
+                if ($("#passwordField").attr("type") === "text") {
+                    $("#passwordField").attr("type", "password");
+                    $("#showPassword").removeClass("fa-eye-slash").addClass("fa-eye");
+                    $("#eventStatus").text("mouseleave event fired: Password hidden");
+                    $("#eventStatus").css("background-color", "#ffeef0");
+                }
+            });
+
+            $("#passwordField").val("ExamplePassword123");
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f8;
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+
+        p {
+            width: 70%;
+            margin: 0 auto;
+            padding: 20px;
+            font-size: 18px;
+            color: #34495e;
+            background-color: #ecf0f1;
+            border: 1px solid #bdc3c7;
+            border-radius: 10px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        p:hover {
+            background-color: #ffe6e6;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("p").mouseenter(function () {
+                $(this).hide();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Mouse Enter Event:</h1>
+    <p>Hover your mouse over this paragraph to hide it.</p>
+</body>
+
+</html>

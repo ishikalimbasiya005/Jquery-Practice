@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+
+        p {
+            width: 70%;
+            margin: 20px auto;
+            padding: 20px;
+            font-size: 18px;
+            color: #34495e;
+            background-color: #ecf0f1;
+            border: 1px solid #bdc3c7;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        p:hover {
+            background-color: #d0e8f2;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("p").dblclick(function () {
+                $(this).hide();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Double-Click Events :---</h1>
+    <p>Double-click me to hide! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident, reiciendis.</p>
+</body>
+
+</html>

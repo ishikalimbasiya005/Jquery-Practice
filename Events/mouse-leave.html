@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            padding: 50px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+
+        p {
+            width: 70%;
+            margin: 20px auto;
+            padding: 20px;
+            font-size: 18px;
+            color: #2f3640;
+            background-color: #dff9fb;
+            border: 1px solid #c7ecee;
+            border-radius: 10px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        p:hover {
+            background-color: #c7ecee;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("p").mouseleave(function () {
+                $(this).hide(); // Hides only the paragraph you left
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1>This is Mouse-leave Event:</h1>
+    <p>Move your mouse over me and then leave — I’ll disappear!</p>
+</body>
+
+</html>

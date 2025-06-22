@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 30px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #444;
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            width: 60%;
+            margin: 0 auto;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        p:hover {
+            background-color: #e6f7ff;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("p").click(function () {
+                $(this).hide();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Click Events :---</h1>
+    <p>Click me to hide! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident, reiciendis.</p>
+</body>
+
+</html>

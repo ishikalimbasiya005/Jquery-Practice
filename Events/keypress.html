@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f8;
+            padding: 50px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+
+        label {
+            font-size: 18px;
+            color: #34495e;
+        }
+
+        input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            display: block;
+        }
+
+        span {
+            display: inline-block;
+            font-size: 20px;
+            color: #d35400;
+            font-weight: bold;
+            padding: 10px 15px;
+            background-color: #fcf3cf;
+            border: 1px solid #f1c40f;
+            border-radius: 8px;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("input").keypress(function (event) {
+                $("span").text("You pressed key: " + String.fromCharCode(event.which));
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h2>KeyPress Event:</h2>
+    <label for="keypress">Your KeyPress Characters:</label>
+    <input type="text" id="keypress">
+    <br>
+    <span>0</span>
+</body>
+
+</html>
