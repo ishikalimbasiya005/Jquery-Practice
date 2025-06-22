@@ -44,6 +44,9 @@ This repository is created for hands-on **practice and learning of jQuery**. It 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 ```
 ## 📬 Connect with Me
-    🌐 GitHub: https://github.com/ishikalimbasiya005
-    💼 LinkedIn: www.linkedin.com/in/ishikalimbasiya
+
+If you find this useful or want to collaborate, feel free to connect:
+
+- 🌐 GitHub: https://github.com/ishikalimbasiya005
+- 💼 LinkedIn: www.linkedin.com/in/ishikalimbasiya
 
