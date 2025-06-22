@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY SlideUp & SlideDown</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#button").click(function () {
+                $("p").slideDown();
+            });
+
+            $("#button1").click(function () {
+                $("p").slideUp("slow");
+            });
+        });
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fdf2f2;
+            margin: 0;
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #d62828;
+            margin-bottom: 30px;
+        }
+
+        .container {
+            background-color: #f8d7da;
+            border: 1px solid #f5c2c7;
+            border-radius: 10px;
+            padding: 30px;
+            display: inline-block;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #c82333;
+        }
+
+        p {
+            display: none;
+            color: #721c24;
+            background-color: #f1b0b7;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>This is SlideUp - SlideDown Event</h1>
+    <div class="container">
+        <button id="button">Slide Down</button>
+        <button id="button1">Slide Up</button>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea eum expedita corporis perferendis nam deserunt
+            praesentium tempore rem, unde non labore repudiandae illo sed, maiores amet accusamus molestiae velit quidem
+            fuga. Modi similique dignissimos fugiat quaerat magni ratione consequuntur suscipit possimus! Libero odit
+            odio, dolore quis deleniti debitis mollitia adipisci!
+        </p>
+    </div>
+</body>
+
+</html>

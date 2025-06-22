@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY Slide Toggle</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("p").slideToggle(1000);
+            });
+        });
+    </script>
+
+    <style>
+        /* Body Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffecec;
+            margin: 0;
+            padding: 40px;
+            text-align: center;
+        }
+
+        /* Heading Styling */
+        h1 {
+            color: #d62828;
+            margin-bottom: 30px;
+        }
+
+        /* Container Styling */
+        div {
+            background-color: #f8d7da;
+            border: 1px solid #f5c2c7;
+            border-radius: 10px;
+            padding: 30px;
+            display: inline-block;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Button Styling */
+        button {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 12px 50px;
+            font-size: 16px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #bd2130;
+        }
+
+        /* Paragraph Styling */
+        p {
+            display: none;
+            color: #721c24;
+            background-color: #f1b0b7;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>This is Slide Toggle Event</h1>
+    <div>
+        <button>Slide Toggle</button>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea eum expedita corporis perferendis nam deserunt
+            praesentium tempore rem, unde non labore repudiandae illo sed, maiores amet accusamus molestiae velit quidem
+            fuga. Modi similique dignissimos fugiat quaerat magni ratione consequuntur suscipit possimus! Libero odit
+            odio, dolore quis deleniti debitis mollitia adipisci!
+        </p>
+    </div>
+</body>
+
+</html>
