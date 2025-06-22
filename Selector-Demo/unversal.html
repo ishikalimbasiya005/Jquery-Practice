@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Universal Selector (*)</title>
+
+    <!-- jQuery CDN (recommended for reliability) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- CSS Styling -->
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 80px auto;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #0077cc;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 16px;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #c82333;
+        }
+    </style>
+
+    <!-- jQuery Script -->
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("*").hide(); // Hides everything on the page
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>This is a Universal Selector (*)</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, quasi?</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <button>Click Me!</button>
+    </div>
+
+</body>
+
+</html>

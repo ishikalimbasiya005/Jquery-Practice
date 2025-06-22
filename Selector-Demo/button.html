@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery :button Selector</title>
+
+    <!-- jQuery -->
+    <script src="../jquery-3.7.1.min.js"></script>
+
+    <!-- CSS Styling -->
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 60px auto;
+            padding: 30px 40px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #0077cc;
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        /* Common button styles */
+        input[type="button"],
+        button {
+            margin: 10px 8px;
+            padding: 12px 25px;
+            font-size: 16px;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+        }
+
+        /* Submit button - Blue */
+        input[type="button"][value="Submit"] {
+            background-color: #007bff;
+        }
+
+        input[type="button"][value="Submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Reset button - Orange */
+        input[type="button"][value="Reset"] {
+            background-color: #fd7e14;
+        }
+
+        input[type="button"][value="Reset"]:hover {
+            background-color: #e8590c;
+        }
+
+        /* jQuery button - Green */
+        button {
+            background-color: #28a745;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- jQuery Script -->
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $(":button").hide(); // Hides all buttons including input and <button>
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>This is a ":button" Selector Example</h1>
+
+        <!-- input type buttons -->
+        <form action="#">
+            <input type="button" value="Submit">
+            <input type="button" value="Reset">
+        </form>
+
+        <!-- regular button tag -->
+        <button>Click Me to Hide All Buttons</button>
+    </div>
+
+</body>
+
+</html>
