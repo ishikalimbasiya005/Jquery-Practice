@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Animation</title>
+
+    <script src="../jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                // Better to use a variable
+                var box = $("div.box");
+                box.animate({ height: '300px', opacity: '0.7' }, "slow");
+                box.animate({ width: '300px', opacity: '0.4' }, "slow");
+                box.animate({ height: '100px', opacity: '0.7' }, "slow");
+                box.animate({ width: '100px', opacity: '0.4' }, "slow");
+            });
+        });
+    </script>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            color: #cc0000;
+            margin-bottom: 30px;
+        }
+
+        button {
+            background-color: #e60000;
+            color: white;
+            padding: 12px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #b30000;
+        }
+
+        .box {
+            background-color: #ff9999;
+            width: 100px;
+            height: 100px;
+            margin: 60px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>This is an Animation Event</h1>
+
+    <button>CLICK ME!</button>
+
+    <div class="box"></div>
+</body>
+
+</html>

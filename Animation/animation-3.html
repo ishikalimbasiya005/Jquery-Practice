@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Toggle Animation</title>
+
+    <script src="../jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("div.box").animate({ height: 'toggle' });
+            });
+        });
+    </script>
+
+    <style>
+        /* Reset & Base Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f7f7f7;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        h1 {
+            color: #b30000;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        button {
+            background-color: #e60000;
+            color: white;
+            padding: 14px 40px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-bottom: 40px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #b30000;
+        }
+
+        .box {
+            background-color: #ff9999;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+            transition: all 0.4s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>This is an Animation Event:</h1>
+
+    <button>CLICK ME!</button>
+
+    <div class="box"></div>
+</body>
+
+</html>
