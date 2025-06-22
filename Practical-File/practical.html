@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Magento SEO FAQs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="../JQUERY/jquery-3.7.1.min.js"></script>
+
+    <style>
+        * {
+            font-family: "Open Sans", sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f7f7f7;
+            padding: 40px 10px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #171717;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 15px;
+        }
+
+        .faq-col {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .faq-col-1 {
+            background-color: #f1f9fc;
+            flex: 1 1 48%;
+            padding: 20px 25px;
+            border-radius: 10px;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .faq-title {
+            font-weight: 600;
+            font-size: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #111;
+        }
+
+        .plus {
+            font-size: 24px;
+            color: #007bff;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-content {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .faq-content p {
+            font-size: 15px;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 768px) {
+            .faq-col-1 {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            $('.faq-title').click(function () {
+                const content = $(this).closest('.faq-col-1').find('.faq-content');
+                const icon = $(this).find('.plus');
+
+                const isVisible = content.is(':visible');
+
+                // Close all others
+                $('.faq-content').slideUp();
+                $('.plus').text('+');
+
+                // Toggle current if not already open
+                if (!isVisible) {
+                    content.slideDown();
+                    icon.text('-');
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <h1>Magento SEO FAQs</h1>
+    <div class="container">
+        <div class="faq-col">
+            <div class="faq-col-1">
+                <div class="faq-title">
+                    Is Magento good for SEO?
+                    <span class="plus">+</span>
+                </div>
+                <div class="faq-content">
+                    <p>
+                        If you're looking for a platform that is good for SEO, then you should definitely consider
+                        Magento. Magento is a leading eCommerce platform that is known for its flexibility and
+                        scalability.
+                    </p>
+                    <p>
+                        You can easily create an SEO-friendly website that will help you rank higher in search engine
+                        results pages.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-col-1">
+                <div class="faq-title">
+                    What is Magento SEO?
+                    <span class="plus">+</span>
+                </div>
+                <div class="faq-content">
+                    <p>
+                        Magento SEO is the optimization of a website built on the Magento platform. It includes
+                        technical SEO, backlinking, keyword strategies, and SEO extensions for better ranking.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-col">
+            <div class="faq-col-1">
+                <div class="faq-title">
+                    How to Improve Magento SEO?
+                    <span class="plus">+</span>
+                </div>
+                <div class="faq-content">
+                    <p>
+                        Use unique product titles and descriptions, include relevant keywords, and publish quality
+                        content. These practices help improve your Magento SEO performance.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-col-1">
+                <div class="faq-title">
+                    What is Magento HTML Sitemap?
+                    <span class="plus">+</span>
+                </div>
+                <div class="faq-content">
+                    <p>
+                        Magento HTML Sitemap helps organize your website structure and allows users and search engines
+                        to navigate easily. You can manage and update it using Magento admin tools.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
