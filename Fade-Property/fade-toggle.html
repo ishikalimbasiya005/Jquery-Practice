@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery fadeToggle - Styled</title>
+
+    <!-- jQuery -->
+    <script src="../jquery-3.7.1.min.js"></script>
+
+    <!-- Script -->
+    <script>
+        $(document).ready(function () {
+            $("#toggle").click(function () {
+                $("p").fadeToggle(1000);
+            });
+        });
+    </script>
+
+    <!-- Styling -->
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #fff0f5;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #cc3399;
+            margin-bottom: 30px;
+        }
+
+        div {
+            max-width: 800px;
+            margin: auto;
+            padding: 30px;
+            background-color: #ffe6f0;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(204, 51, 153, 0.2);
+        }
+
+        button {
+            background-color: #ff66b2;
+            color: white;
+            padding: 12px 40px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-bottom: 25px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #cc3385;
+        }
+
+        p {
+            display: none;
+            background-color: #ffcce6;
+            padding: 20px;
+            color: #333;
+            border-radius: 10px;
+            margin-top: 20px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>This is fadeToggle() Event</h1>
+    <div>
+        <button id="toggle">Toggle Paragraph</button>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea eum expedita corporis perferendis nam deserunt
+            praesentium tempore rem, unde non labore repudiandae illo sed, maiores amet accusamus molestiae velit quidem
+            fuga. Modi similique dignissimos fugiat quaerat magni ratione consequuntur suscipit possimus! Libero odit
+            odio, dolore quis deleniti debitis mollitia adipisci!
+        </p>
+    </div>
+</body>
+
+</html>

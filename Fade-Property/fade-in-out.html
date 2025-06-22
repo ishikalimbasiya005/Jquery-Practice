@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Fade In & Out - Pink Theme</title>
+
+    <!-- jQuery Library -->
+    <script src="../jquery-3.7.1.min.js"></script>
+
+    <!-- jQuery Function -->
+    <script>
+        $(document).ready(function () {
+            $("#show").click(function () {
+                $("p").fadeIn(1000);
+            });
+
+            $("#hide").click(function () {
+                $("p").fadeOut(1000);
+            });
+        });
+    </script>
+
+    <!-- Styling -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffe6f0;
+            /* light pink */
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #cc3399;
+            /* deep pink */
+        }
+
+        .button-container {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #ff66b2;
+            /* medium pink */
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            margin: 10px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #cc3399;
+            /* darker pink on hover */
+        }
+
+        p {
+            display: none;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            background-color: #ffcce6;
+            /* soft pink */
+            color: #333;
+            border-radius: 10px;
+            line-height: 1.6;
+        }
+
+        div {
+            max-width: 800px;
+            margin: auto;
+            background-color: #ffe6f0;
+            /* container background pink */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(204, 51, 153, 0.2);
+            /* pink shadow */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>This is fadeIn & fadeOut Example</h1>
+    <div>
+        <div class="button-container">
+            <button id="show">Fade In</button>
+            <button id="hide">Fade Out</button>
+        </div>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea eum expedita corporis perferendis nam deserunt
+            praesentium tempore rem, unde non labore repudiandae illo sed, maiores amet accusamus molestiae velit quidem
+            fuga. Modi similique dignissimos fugiat quaerat magni ratione consequuntur suscipit possimus! Libero odit
+            odio, dolore quis deleniti debitis mollitia adipisci!
+        </p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery fadeTo() - Pink Style</title>
+
+    <!-- jQuery -->
+    <script src="../jquery-3.7.1.min.js"></script>
+
+    <!-- jQuery Script -->
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#p1").fadeTo("slow", 0.15);
+                $("#p2").fadeTo("1000", 0.5);
+                $("#p3").fadeTo("1000", 0.7);
+            });
+        });
+    </script>
+
+    <!-- Styling -->
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #fff0f5;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #d63384;
+            margin-bottom: 30px;
+        }
+
+        div {
+            max-width: 900px;
+            margin: auto;
+            padding: 30px;
+            background-color: #ffe6f0;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(214, 51, 132, 0.2);
+        }
+
+        button {
+            background-color: #ff66b2;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 25px;
+        }
+
+        button:hover {
+            background-color: #cc3385;
+        }
+
+        p {
+            display: none;
+            background-color: #ffcce6;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            color: #333;
+            line-height: 1.6;
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>This is fadeTo() Event</h1>
+    <div>
+        <button>Click Me to Fade Paragraphs</button>
+
+        <p id="p1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea eum expedita corporis perferendis nam
+            deserunt praesentium tempore rem, unde non labore repudiandae illo sed, maiores amet accusamus molestiae
+            velit quidem fuga.</p>
+
+        <p id="p2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste fugit sint laudantium, tempora
+            obcaecati sapiente. Nesciunt consequuntur nam, inventore iure distinctio ea molestias magnam, voluptas quis
+            repellendus labore voluptatibus laudantium?</p>
+
+        <p id="p3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero sequi ducimus quis cumque nesciunt
+            quasi fuga voluptates reprehenderit facilis consequatur harum nam dolorem blanditiis vitae, est tempore
+            asperiores rem distinctio.</p>
+    </div>
+</body>
+
+</html>
