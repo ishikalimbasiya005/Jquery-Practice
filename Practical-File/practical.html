@@ -5,8 +5,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Magento SEO FAQs</title>
+
+    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <script src="../JQUERY/jquery-3.7.1.min.js"></script>
+
+    <!-- jQuery CDN (consider using CDN instead of local file) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <style>
         * {
@@ -91,14 +95,13 @@
             $('.faq-title').click(function () {
                 const content = $(this).closest('.faq-col-1').find('.faq-content');
                 const icon = $(this).find('.plus');
-
                 const isVisible = content.is(':visible');
 
-                // Close all others
+                // Close all other open answers
                 $('.faq-content').slideUp();
                 $('.plus').text('+');
 
-                // Toggle current if not already open
+                // Toggle current one
                 if (!isVisible) {
                     content.slideDown();
                     icon.text('-');
@@ -111,35 +114,34 @@
 <body>
 
     <h1>Magento SEO FAQs</h1>
+
     <div class="container">
         <div class="faq-col">
             <div class="faq-col-1">
                 <div class="faq-title">
-                    Is Magento good for SEO?
+                    <span>Is Magento good for SEO?</span>
                     <span class="plus">+</span>
                 </div>
                 <div class="faq-content">
                     <p>
-                        If you're looking for a platform that is good for SEO, then you should definitely consider
-                        Magento. Magento is a leading eCommerce platform that is known for its flexibility and
-                        scalability.
+                        If you're looking for a platform that is good for SEO, then you should definitely consider Magento.
+                        Magento is a leading eCommerce platform that is known for its flexibility and scalability.
                     </p>
                     <p>
-                        You can easily create an SEO-friendly website that will help you rank higher in search engine
-                        results pages.
+                        You can easily create an SEO-friendly website that will help you rank higher in search engine results pages.
                     </p>
                 </div>
             </div>
 
             <div class="faq-col-1">
                 <div class="faq-title">
-                    What is Magento SEO?
+                    <span>What is Magento SEO?</span>
                     <span class="plus">+</span>
                 </div>
                 <div class="faq-content">
                     <p>
-                        Magento SEO is the optimization of a website built on the Magento platform. It includes
-                        technical SEO, backlinking, keyword strategies, and SEO extensions for better ranking.
+                        Magento SEO is the optimization of a website built on the Magento platform.
+                        It includes technical SEO, backlinking, keyword strategies, and SEO extensions for better ranking.
                     </p>
                 </div>
             </div>
@@ -148,26 +150,26 @@
         <div class="faq-col">
             <div class="faq-col-1">
                 <div class="faq-title">
-                    How to Improve Magento SEO?
+                    <span>How to Improve Magento SEO?</span>
                     <span class="plus">+</span>
                 </div>
                 <div class="faq-content">
                     <p>
-                        Use unique product titles and descriptions, include relevant keywords, and publish quality
-                        content. These practices help improve your Magento SEO performance.
+                        Use unique product titles and descriptions, include relevant keywords, and publish quality content.
+                        These practices help improve your Magento SEO performance.
                     </p>
                 </div>
             </div>
 
             <div class="faq-col-1">
                 <div class="faq-title">
-                    What is Magento HTML Sitemap?
+                    <span>What is Magento HTML Sitemap?</span>
                     <span class="plus">+</span>
                 </div>
                 <div class="faq-content">
                     <p>
-                        Magento HTML Sitemap helps organize your website structure and allows users and search engines
-                        to navigate easily. You can manage and update it using Magento admin tools.
+                        Magento HTML Sitemap helps organize your website structure and allows users and search engines to navigate easily.
+                        You can manage and update it using Magento admin tools.
                     </p>
                 </div>
             </div>
