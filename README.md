@@ -43,6 +43,8 @@ This repository is created for hands-on **practice and learning of jQuery**. It 
 <!-- Include jQuery CDN -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 ```
+"Learn more about jQuery by exploring tutorials on W3Schools."
+
 ## 📬 Connect with Me
 
 If you find this useful or want to collaborate, feel free to connect:
