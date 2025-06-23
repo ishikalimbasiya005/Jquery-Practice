@@ -2,6 +2,10 @@
 
 This project is a clean and responsive FAQ section implemented using **HTML**, **CSS**, and **jQuery**. It follows an accordion style where only one FAQ answer opens at a time for better user experience.
 
+## 📸 Preview
+
+![Preview of the Magento SEO FAQs section](preview.png)
+
 ## ✅ Features
 
 - Smooth slide toggle for each FAQ
