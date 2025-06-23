@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Callback Example</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+    <style>
+        * {
+            background-color: rgb(31, 19, 31);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 30px;
+            color: white;
+        }
+
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            text-align: center;
+            line-height: 200px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CallBack Function</h1>
+    <hr>
+    <div id="box">Click Me</div>
+
+    <script>
+        $(document).ready(function () {
+            $("#box").click(function () {
+                $(this).hide(1000, function () {
+                    // Callback function: this code runs after hide is complete
+                    alert("This is Callback Function");
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
