@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Chaining Example</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+    <style>
+        * {
+            background-color: darkseagreen;
+        }
+
+        h1 {
+            text-transform: capitalize;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: teal;
+            color: white;
+            line-height: 200px;
+            text-align: center;
+            font-size: 20px;
+            margin: 20px;
+        }
+
+        #animateBtn {
+            font-size: 20px;
+            background-color: black;
+            color: white;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Chaining Method</h1>
+    <hr>
+    <div id="box">Hello</div>
+
+    <button id="animateBtn">Animate : Click Me!</button>
+
+    <script>
+        $(document).ready(function () {
+            $("#animateBtn").click(function () {
+                $("#box")
+                    .css("background-color", "crimson")   // change color
+                    .slideUp(1000)                        // slide up in 1 second
+                    .slideDown(1000)                      // slide down in 1 second
+                    .fadeOut(1000)                        // fade out
+                    .fadeIn(1000);                        // fade in
+            });
+        });
+    </script>
+
+</body>
+
+</html>
