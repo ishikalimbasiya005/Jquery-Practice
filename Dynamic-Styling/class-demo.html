@@ -1,106 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jquery Styling</title>
-     <script src="../jquery-3.7.1.min.js"></script>
+    <script src="../jquery-3.7.1.min.js"></script>
 
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f4f4f4;
-      padding-top: 50px;
-      text-align: center;
-    }
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f4f4;
+            padding-top: 50px;
+            text-align: center;
+        }
 
-    h2 {
-      margin-bottom: 30px;
-      color: #333;
-    }
+        h2 {
+            margin-bottom: 30px;
+            color: #333;
+        }
 
-    .notification {
-      width: 320px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #ffffff;
-      border: 2px solid #ccc;
-      border-radius: 10px;
-      transition: all 0.3s ease;
-      font-size: 18px;
-      color: #555;
-    }
+        .notification {
+            width: 320px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            font-size: 18px;
+            color: #555;
+        }
 
-    .success {
-      background-color: #d4edda;
-      border-color: #28a745;
-      color: #155724;
-    }
+        .success {
+            background-color: #d4edda;
+            border-color: #28a745;
+            color: #155724;
+        }
 
-    .error {
-      background-color: #f8d7da;
-      border-color: #dc3545;
-      color: #721c24;
-    }
+        .error {
+            background-color: #f8d7da;
+            border-color: #dc3545;
+            color: #721c24;
+        }
 
-    .rounded {
-      border-radius: 30px;
-    }
+        .rounded {
+            border-radius: 30px;
+        }
 
-    button {
-      margin: 10px 5px;
-      padding: 10px 15px;
-      border: none;
-      border-radius: 5px;
-      font-size: 15px;
-      cursor: pointer;
-      background-color: #007bff;
-      color: white;
-      transition: background-color 0.3s;
-    }
+        button {
+            margin: 10px 5px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 15px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
 
-    button:hover {
-      background-color: #0056b3;
-    }
-  </style>
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 
-  <script>
-    $(document).ready(function () {
-      $("#addSuccess").click(function () {
-        $(".notification").addClass("success");
-      });
+    <script>
+        $(document).ready(function () {
+            $("#addSuccess").click(function () {
+                $(".notification").addClass("success");
+            });
 
-      $("#removeStyles").click(function () {
-        $(".notification").removeClass("success error");
-      });
+            $("#removeStyles").click(function () {
+                $(".notification").removeClass("success error");
+            });
 
-      $("#toggleRounded").click(function () {
-        $(".notification").toggleClass("rounded");
-      });
+            $("#toggleRounded").click(function () {
+                $(".notification").toggleClass("rounded");
+            });
 
-      $("#customCss").click(function () {
-        $(".notification").css({
-          "font-weight": "bold",
-          "font-style": "italic",
-          "box-shadow": "0 0 15px rgba(0,0,0,0.2)"
+            $("#customCss").click(function () {
+                $(".notification").css({
+                    "font-weight": "bold",
+                    "font-style": "italic",
+                    "box-shadow": "0 0 15px rgba(0,0,0,0.2)"
+                });
+            });
         });
-      });
-    });
-  </script>
+    </script>
 </head>
+
 <body>
     <h2>jQuery Class & CSS Demo</h2>
 
-  <div class="notification">
-    This is a notification message.
-  </div>
+    <div class="notification">
+        This is a notification message.
+    </div>
 
-  <button id="addSuccess">Success Style</button>
-  <button id="removeStyles">Remove Styles</button>
-  <button id="toggleRounded">Toggle Rounded</button>
-  <button id="customCss">Apply Custom CSS</button>
+    <button id="addSuccess">Success Style</button>
+    <button id="removeStyles">Remove Styles</button>
+    <button id="toggleRounded">Toggle Rounded</button>
+    <button id="customCss">Apply Custom CSS</button>
 
 </body>
+
 </html>
-
-
