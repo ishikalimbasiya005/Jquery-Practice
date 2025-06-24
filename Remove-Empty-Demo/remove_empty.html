@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery: remove() and empty() Example</title>
+     <script src="../jquery-3.7.1.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding-top: 40px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        #contentBox {
+            background-color: #fff;
+            border: 2px solid #ccc;
+            padding: 20px;
+            width: 350px;
+            margin: 20px auto;
+            font-size: 18px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 15px 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #e91e63;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #c2185b;
+        }
+
+        .item {
+            margin: 10px;
+            padding: 10px;
+            background-color: #ffecb3;
+            border: 1px solid #ffc107;
+            border-radius: 5px;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            $("#removeBtn").click(function () {
+                $("#contentBox").remove(); // removes the whole element
+            });
+
+            $("#emptyBtn").click(function () {
+                $("#contentBox").empty(); // removes only the inner content
+            });
+        });
+    </script>
+</head>
+<body>
+     <h1>jQuery: remove() and empty() Methods</h1>
+
+    <div id="contentBox">
+        <div class="item">🌟 Item 1</div>
+        <div class="item">🌟 Item 2</div>
+        <div class="item">🌟 Item 3</div>
+    </div>
+    <button id="emptyBtn">Empty Box</button>
+    <button id="removeBtn">Remove Box</button>
+</body>
+</html>
+
