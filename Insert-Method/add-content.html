@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+    <link rel="stylesheet" href="../jquery-3.7.1.min.js">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding-top: 40px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        #demoBox {
+            background-color: #fff;
+            border: 2px solid #ccc;
+            padding: 20px;
+            width: 300px;
+            margin: 20px auto;
+            font-size: 18px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px 5px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .inserted {
+            color: #e91e63;
+            font-weight: bold;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            $("#btnBefore").click(function () {
+                $("#demoBox").before("<div class='inserted'>👉 Added Before</div>");
+            });
+
+            $("#btnAfter").click(function () {
+                $("#demoBox").after("<div class='inserted'>👉 Added After</div>");
+            });
+
+            $("#btnPrepend").click(function () {
+                $("#demoBox").prepend("<div class='inserted'>🚀 Prepend Text</div>");
+            });
+
+            $("#btnAppend").click(function () {
+                $("#demoBox").append("<div class='inserted'>✨ Append Text</div>");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1>jQuery: after(), before(), append(), prepend()</h1>
+
+    <div id="demoBox">This is the main content box.</div>
+
+    <button id="btnBefore">Insert Before</button>
+    <button id="btnAfter">Insert After</button>
+    <button id="btnPrepend">Prepend Inside</button>
+    <button id="btnAppend">Append Inside</button>
+</body>
+
+</html>
