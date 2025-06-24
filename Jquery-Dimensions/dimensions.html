@@ -2,168 +2,154 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jQuery Dimensions Visual Demo</title>
-    <script src="../jquery-3.7.1.min.js"></script>
-    <style>
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            background-color: #f0f0f0;
-            text-align: center;
-            padding-top: 30px;
-        }
+  <meta charset="UTF-8">
+  <title>jQuery Dimensions Visual Demo</title>
+  <script src="../jquery-3.7.1.min.js"></script>
 
-        h2 {
-            color: #333;
-        }
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f0f0;
+      text-align: center;
+      padding-top: 30px;
+    }
 
-        #boxWrapper {
-            background-color: #007bff;
-            /* border color */
-            border: 10px solid #007bff;
-            width: fit-content;
-            margin: 20px auto;
-        }
+    h2 {
+      color: #333;
+    }
 
-        #box {
-            background-color: #bbdefb;
-            /* padding color */
-            padding: 20px;
-            width: 300px;
-            height: 150px;
-            position: relative;
-            box-sizing: content-box;
-        }
+    /* BOX WITH padding + border */
+    #box {
+      width: 280px;                
+      height: 120px;        
+      padding: 20px;              
+      border: 15px solid #007bff; 
+      background-color: #bbdefb;
+      box-sizing: content-box;    
+      margin: 0 auto;
+      position: relative;
+    }
 
-        #contentArea {
-            background-color: #ffffff;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #333;
-            font-size: 16px;
-            font-style: italic;
-        }
+    #contentArea {
+      background-color: #ffffff;      /* Actual content area */
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #333;
+      font-size: 16px;
+      font-style: italic;
+    }
 
-        .label {
-            margin-top: 10px;
-            font-size: 16px;
-        }
+    button {
+      margin: 8px 5px;
+      padding: 10px 15px;
+      font-size: 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: #28a745;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
 
-        button {
-            margin: 8px 5px;
-            padding: 10px 15px;
-            font-size: 15px;
-            border: none;
-            border-radius: 5px;
-            background-color: #28a745;
-            color: white;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
+    button:hover {
+      background-color: #218838;
+    }
 
-        button:hover {
-            background-color: #218838;
-        }
+    #output {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+    }
 
-        #output {
-            margin-top: 20px;
-            font-size: 18px;
-            color: #333;
-        }
+    .legend {
+      margin-top: 30px;
+      font-size: 14px;
+      line-height: 1.6;
+    }
 
-        .legend {
-            margin-top: 30px;
-            font-size: 14px;
-            line-height: 1.6;
-        }
+    .legend span {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
 
-        .legend span {
-            display: inline-block;
-            width: 15px;
-            height: 15px;
-            margin-right: 8px;
-            vertical-align: middle;
-        }
+    .legend-item {
+      margin: 5px 0;
+    }
 
-        .legend-item {
-            margin: 5px 0;
-        }
+    .content-color {
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+    }
 
-        .content-color {
-            background-color: #ffffff;
-            border: 1px solid #ccc;
-        }
+    .padding-color {
+      background-color: #bbdefb;
+    }
 
-        .padding-color {
-            background-color: #bbdefb;
-        }
+    .border-color {
+      background-color: #007bff;
+    }
+  </style>
 
-        .border-color {
-            background-color: #007bff;
-        }
-    </style>
+  <script>
+    $(document).ready(function () {
+      $("#btnWidth").click(function () {
+        $("#output").text("Width (content only): " + $("#box").width() + "px");
+      });
 
-    <script>
-        $(document).ready(function () {
-            $("#btnWidth").click(function () {
-                $("#output").text("Width (content only): " + $("#box").width() + "px");
-            });
+      $("#btnHeight").click(function () {
+        $("#output").text("Height (content only): " + $("#box").height() + "px");
+      });
 
-            $("#btnHeight").click(function () {
-                $("#output").text("Height (content only): " + $("#box").height() + "px");
-            });
+      $("#btnInnerWidth").click(function () {
+        $("#output").text("Inner Width (content + padding): " + $("#box").innerWidth() + "px");
+      });
 
-            $("#btnInnerWidth").click(function () {
-                $("#output").text("Inner Width (content + padding): " + $("#box").innerWidth() + "px");
-            });
+      $("#btnInnerHeight").click(function () {
+        $("#output").text("Inner Height (content + padding): " + $("#box").innerHeight() + "px");
+      });
 
-            $("#btnInnerHeight").click(function () {
-                $("#output").text("Inner Height (content + padding): " + $("#box").innerHeight() + "px");
-            });
+      $("#btnOuterWidth").click(function () {
+        $("#output").text("Outer Width (content + padding + border): " + $("#box").outerWidth() + "px");
+      });
 
-            $("#btnOuterWidth").click(function () {
-                $("#output").text("Outer Width (content + padding + border): " + $("#box").outerWidth() + "px");
-            });
-
-            $("#btnOuterHeight").click(function () {
-                $("#output").text("Outer Height (content + padding + border): " + $("#box").outerHeight() + "px");
-            });
-        });
-    </script>
+      $("#btnOuterHeight").click(function () {
+        $("#output").text("Outer Height (content + padding + border): " + $("#box").outerHeight() + "px");
+      });
+    });
+  </script>
 </head>
 
 <body>
 
-    <h2>jQuery Dimensions Visual Demo</h2>
+  <h2>jQuery Dimensions Visual Demo</h2>
 
-    <div id="boxWrapper">
-        <div id="box">
-            <div id="contentArea">Content Area</div>
-        </div>
-    </div>
+  <div id="box">
+    <div id="contentArea">Content Area</div>
+  </div>
 
-    <div class="label">Click buttons to get dimensions of the box</div>
+  <div class="label">Click buttons to get dimensions of the box</div>
 
-    <button id="btnWidth">Get Width</button>
-    <button id="btnHeight">Get Height</button>
-    <button id="btnInnerWidth">Get Inner Width</button>
-    <button id="btnInnerHeight">Get Inner Height</button>
-    <button id="btnOuterWidth">Get Outer Width</button>
-    <button id="btnOuterHeight">Get Outer Height</button>
+  <button id="btnWidth">Get Width</button>
+  <button id="btnHeight">Get Height</button>
+  <button id="btnInnerWidth">Get Inner Width</button>
+  <button id="btnInnerHeight">Get Inner Height</button>
+  <button id="btnOuterWidth">Get Outer Width</button>
+  <button id="btnOuterHeight">Get Outer Height</button>
 
-    <div id="output"></div>
+  <div id="output"></div>
 
-    <div class="legend">
-        <h4>📌 Box Breakdown:</h4>
-        <div class="legend-item"><span class="content-color"></span> Content Area (.width() / .height())</div>
-        <div class="legend-item"><span class="padding-color"></span> Padding Area (included in .innerWidth() /
-            .innerHeight())</div>
-        <div class="legend-item"><span class="border-color"></span> Border Area (included in .outerWidth() /
-            .outerHeight())</div>
-    </div>
+  <div class="legend">
+    <h4>Box Breakdown:</h4>
+    <div class="legend-item"><span class="content-color"></span> Content Area (measured by `.width()` / `.height()`)</div>
+    <div class="legend-item"><span class="padding-color"></span> Padding Area (included in `.innerWidth()` / `.innerHeight()`)</div>
+    <div class="legend-item"><span class="border-color"></span> Border Area (included in `.outerWidth()` / `.outerHeight()`)</div>
+  </div>
 
 </body>
 
